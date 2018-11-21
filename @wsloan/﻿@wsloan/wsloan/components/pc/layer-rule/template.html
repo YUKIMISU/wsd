@@ -1,0 +1,14 @@
+<div class="layer-rule-container ">
+
+   
+    <h4 class="main-title">{%= ruleList.mainTitle %}</h4>
+    {%_.each(ruleList.list,function(item, index){ %}
+    <div class="rule-list">
+        <p class="item item-title"><strong>{%= item.cTitle %}</strong></p>
+        <div class="item item-content">
+            <!--<i class="num">{%= index + 1 %}</i>-->
+            {%= item.cContent %}</div>
+    </div>
+    {%});%}
+
+</div>

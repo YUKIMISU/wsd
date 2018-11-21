@@ -1,0 +1,47 @@
+<!-- 浮动层 -->
+<script>
+  var online = [];
+</script>
+<ul class="float-rig" id="floatrig">
+  <li class="f7" id="J_top_img">
+      <i class="float-rigman"></i>
+  </li>
+  <li class="f1 amn2">
+      {%if(!isLogin){%}
+      <i class="J_login">兑换记录</i>
+      {%}else{%}
+      <a href="{%=wsloan.path.dirname%}mall/exchange">兑换记录</a>
+      {%}%}
+  </li>
+  <li class="f2 amn2">
+      {%if(!isLogin){%}
+      <i class="J_login">地址管理</i>
+      {%}else{%}
+      <a href="{%=wsloan.path.dirname%}mall/address">地址管理</a>
+      {%}%}
+  </li>
+  <li class="f5 amn2">
+      <a href="{%=wsloan.path.dirname%}guide/#help-list/#common#9" target="_blank">财币规则</a>
+  </li>
+  <li class="f3 amn2">
+      <b class="b1 J_openQQ">
+          <a href="javascript:" target="_blank" style="display: block; width: 56px; height: 56px"></a>
+      </b>
+      <a href="javascript:" target="_blank" class="J_openQQ">在线客服</a>
+      <div class="kefu-num" id="kefu">
+          <h4>QQ在线客服</h4>
+          {%_.each(qqList,function(item,i){%} {% if(qqList.length - 2 == i){ %}
+          <h4>值班客服</h4>
+          {% }; %}
+          <a href="javascript:;" data-qq="{%=item.qq%}">
+              {% if (online && online[i] == 1) { %}
+              <img src="./images/qq_1.jpg">{% } else { %}
+              <img src="./images/qq_2.jpg">{% } %}{%=item.name%}</a>
+          {%})%}
+
+      </div>
+  </li>
+  <li class="f4 amn2 rad5" id="scrolltop">
+      <b></b>
+  </li>
+</ul>

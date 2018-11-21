@@ -1,0 +1,40 @@
+@import "./mixin";
+.btn-recharge {
+    @include ws-btn($width: 254px, $height:52px, $fontSize:16px);
+    &:hover {
+        opacity: .85;
+        filter: alpha(opacity=85);
+    }
+}
+
+.btn-invest {
+    @include ws-btn(150px, 38px, 3px);
+    &.yellow {
+        background: #FFCF54;
+        border: 1px solid #FFCF54;
+        color: #fff;
+    }
+}
+
+.btn {
+    &-code {
+        @include ws-btn($width: 130px, $height:41px, $fontSize:16px);
+    }
+    &-code-cancel {
+        @include ws-btn($width: 130px, $height:41px, $background: #eee);
+        color: #888;
+        &:hover {
+            color: #fb6e52;
+        }
+    }
+    &-sure {
+        @extend .btn-recharge;
+    }
+    &-cancel {
+        @include ws-btn($width: 254px, $height: 52px, $background: #eee);
+        color: #888;
+        cursor: no-drop; // &:hover {
+        //     color: #fb6e52;
+        // }
+    }
+}

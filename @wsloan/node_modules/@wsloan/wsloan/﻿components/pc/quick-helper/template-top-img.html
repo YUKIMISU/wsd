@@ -1,0 +1,9 @@
+<!-- <i class="float-rigman" style="background: url('{%=topImg.img_src%}') 0 0 no-repeat;width: {%=topImg.width%}px;height:{%=topImg.height%}px;top: {%=-topImg.height%}px;margin-left: {%=-topImg.width/2%}px;">
+  <a href="{%=topImg.href%}" target="_blank" style="height:{%= topImg.btnHeight %}px;bottom:{%= topImg.btnBottom %}px;"></a>
+</i> -->
+
+<i class="has-float-rigman" style="background: url('{%=topImg.imgUrl%}') 0 0 no-repeat;width: {%=topImg.width%}px;height:{%=topImg.height%}px;">
+  {% if(topImg.href){ %}
+  <a href="{%=topImg.href%}" target="_blank"></a>
+  {% } %}
+</i>

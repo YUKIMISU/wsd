@@ -1,0 +1,34 @@
+.input {
+    &-jine {
+        background: #f6f7fb;
+        height: 24px;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 6px 8px 20px;
+        font-size: 14px;
+        width: 175px;
+        color: #a5a5a6;
+        *font-size: 20px;
+    }
+}
+
+.input-rltv {
+    position: relative;
+    width: 254px;
+    display: inline-block;
+    margin-right: 10px;
+    background: #f6f7fb;
+    &.trans {
+        width: 374px;
+        .input-jine {
+            width: 295px;
+        }
+    }
+    .unit {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        line-height: 14px;
+        margin-top: -7px;
+    }
+}

@@ -1,0 +1,300 @@
+<div class="c-shortcut">
+        <div class="c-shortcut-inner">
+            <div class="left">
+                <span>财富热线 : 0577-96088</span>
+                <!-- <img src="./images/tel_num.jpg" height="15" width="92" alt="" /> -->
+            </div>
+            <div class="right">
+    
+                {% if(!info.isLogin){ %}
+                <div class="no-login">
+                  <span class="log"><a href='{%= link.login %}'>登录</a></span>
+                  <i class="line"></i>
+                  <span class="reg"><a href='{%= link.register %}'>注册</a></span>
+                </div>
+    
+                {% }else{ %}
+                <ol class="has-login">
+                    <li class="has-login-box">
+                        <span class="user-info-tip" id="J_user_info_tip">
+                            欢迎，<a href="{%= link.memb %}">{%=info.userName %}</a>
+                            <span class="top-vip">
+                                <a href="{%= link.vip %}" class="top-vip-icon{%=info.vipLevel %}"
+                                   title="点击进入VIP会员中心"></a>
+                                <!-- <em class="tip-arrow" id="J_tip_arrow"></em> -->
+                              </span>
+    
+    
+                        </span>
+                        <!-- <div class="user-info-intro" id="J_user_info_intro">
+                            <i></i>
+                            <dl>
+                                <dt>
+                                    <a href="{%= link.membSafe %}">
+                                        <img width='63' height='63' src='//bbsstatic.wsloan.com/picfile/yhtx/{%=info.avatar%}' />
+                                    </a>
+                                </dt>
+    
+                                {% if (info.isSetBank&&info.isSetPwd){ %}
+                                <dd>
+                                    <p>我的成长值:<i class="red">{%=info.growthValue %}</i></p>
+                                    <p>我的财币:<i class="red">{%=info.memberPoint %}</i>
+                                        <a href="{%= link.mall %}">兑换</a>
+                                    </p>
+                                    <p> <span class="ws-hide">红包:<i class="red">{%=info.redPackNum %}</i>个<em>|</em></span><span>体验金:<i class="red">{%=info.exp %}</i>元</p></span>
+                                </dd>
+                                {% }else{ %}
+                                <dd>
+                                    {% if (!info.isSetBank){ %}
+                                    <div class="top-bank-trips"><img src="./images/bank_ico_ts.jpg" /></div>
+                                    {% } %}
+                                    <div class="user-security-icon">
+                                        <a href="{%= link.bankSet %}" class='security-icon1 {%=info.isSetBank?" yes ":" " %}'>
+                                        </a>
+                                        <a href="{%= link.membSafe %}" class="security-icon2 yes"></a>
+                                        <a href="{%= link.membSafe %}" class='security-icon3 {%=info.isSetPwd?" yes ":" " %}'>
+                                        </a>
+                                    </div>
+                                </dd>
+                                {% } %}
+                            </dl>
+                            <div class="memb-btn">
+                                <a href="{%= link.memb %}">
+                                    <img src="./images/btn_member.jpg" />
+                                </a>
+                            </div>
+                        </div> -->
+    
+                        <!-- PC1.5需求 -->
+                        <div class="user-info-intro" id="J_user_info_intro">
+                            <i></i>
+                            <div class="top">
+                                <a href="{%= link.membSafe %}"><div class="left" style="background-image: url(//bbsstatic.wsloan.com/picfile/yhtx/{%=info.avatar%})"></div></a>
+                                <div class="right">
+                                    {% if (info.isSrCustody&&info.isEmailVerify==2){ %}
+                                    <div class="rtop2">
+                                        <p>我的成长值: <span class="red">{%=info.growthValue %}</span></p>
+                                        <p>我的财币: <span class="red">{%=info.memberPoint %}</span>
+                                            <a href="{%= link.mall %}">兑换</a>
+                                        </p>
+                                        <p> <span class="ws-hide">红包: <span class="red">{%=info.redPackNum %}</span>个<em>|</em></span><span>体验金: <span class="red">{%=info.exp %}</span>元</p></span>
+                                    </div>
+                                    {% }else{ %}
+                                    <div class="rtop">
+                                        <div class="tips-box">
+
+                                        </div>
+                                        <span class="arrow"></span>
+                                    </div>
+                                    <div class="rbottom">
+                                        <a data-id="bank" href="{%= link.bankSet %}" class="bank {%= info.isBindCard %}"></a>
+                                        <a data-id="phone" href="{%= link.membSafe %}" class="phone {%= info.isPhoneVerify == 2 %}"></a>
+                                        <a data-id="email" href="{%= link.membSafe %}" class="email {%= info.isEmailVerify == 2 %}"></a>
+                                        <a data-id="pwd" href="{%= link.membSafe %}" class="pwd {%= info.isSrCustody %}"></a>
+                                    </div>
+                                    {% } %}
+                                </div>
+                            </div>
+                            <a href="{%= link.memb %}">
+                                <div class="bottom">
+                                    进入个人中心
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </li>
+                    <!--todo 退出要清cookie-->
+                    <li class="right-line pd10"><a href="javascript:;" id="header-lgout">[退出]</a></li>
+                    <li class="right-line message">
+                        <a href="{%= link.membMessage %}" target="_blank">
+                            消息
+                            <i class="badge">{%=info.messageNum %}</i>
+                        </a>
+                    </li>
+                </ol>
+                {% }%}
+                <ul class="shortcut-links">
+    
+                    <!--{%if(info.isBw == 1){%}
+    
+                    <li style="display:none">
+                        <a href="https://active.wsloan.com/app/2017/millionaire/index.html" target="_blank">
+                            百万讨论区
+                        </a>
+                    </li>
+                    {%} %}-->
+    
+                    <!-- <li>
+                        <a href="http://bbs.wsloan.com/" target="_blank">
+                            综合社区
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{%= link.mall %}" target="_blank">
+                            财币商城
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{%= link.help %}" target="_blank">
+                            帮助中心
+                        </a>
+                    </li> -->
+                    <li class="phone-licai">
+                          手机投资
+                      <ul class="phone-drop">
+                          <li class="appIcon">
+                              <img src="./images/app-icon.png" alt="logo">
+                              <p class="text"> 温商贷投资APP</p>
+                              <p class="sub">随时随地 轻松投资</p>
+                          </li>
+
+                          <li>
+                              <img src="./images/qrcode-app.png" alt="二维码" class="ewm">
+                          </li>
+                          <i class="app"></i>
+                      </ul>
+                    </li>
+                    <li>
+                        <!--<a href="/mall">
+                            财币商城-->
+                        <a href="{%= link.about %}" target="_blank">
+                            关于我们
+                        </a>
+    
+                    </li>
+                </ul>
+    
+                <!--<p class="about-us">-->
+                <!--<a href="{%= path.HOST %}/guide/#about">关于我们</a>-->
+                <!--</p>-->
+            </div>
+    
+            <div class="c-qrcode">
+                <a href="javascript:;" target="_blank" class="c-qrcode-item J_qrcode_item phone">
+                  <!-- "{%= path.HOST %}/appshow/index.aspx" -->
+                    <!--<i>手机APP客户端</i>-->
+                    <div class="qrcode J_qrcode">
+                        <img src="./images/float_wx6.png" />
+                    </div>
+                </a>
+                <span class="c-qrcode-item J_qrcode_item wechat">
+                    <!--<i>微信</i>-->
+                    <div class="qrcode J_qrcode">
+                            <img src="//static.wsloan.com/config-images/logo/header-new-wx.png"/>
+                    </div>
+                </span>
+            </div>
+    
+        </div>
+    </div>
+    
+    
+    <iframe id="loginBox" frameBorder="0" style="display:none;"></iframe>
+    
+    
+    {%if (false) {%}
+    
+    
+    <div class="edit-pass">
+        <h3>重要通知</h3>
+        <ol>
+            <li style="color: #666; text-indent: 0;">尊敬的温商贷用户，您好！</li>
+            <li>为优化用户体验，温商贷对您个人信息和隐私安全进行了加密处理，同时提高了您的密码安全等级。请您输入原交易密码后，进行设置全新6位数密码，完成密码安全升级。</li>
+            <li>由此给您带来的不便请谅解，感谢您的理解与支持！</li>
+        </ol>
+        <h4>确认</h4>
+    </div>
+    <!--交易密码弹窗-->
+    <div class="edit-pass2" id="edit-mypass">
+        <div class="jb-tit">
+            <h4>交易密码修改</h4>
+        </div>
+        <form id="myjymm" name="myjymm" method="post">
+            <ol id="password-tc1" class="ml28">
+                <li><span><em>*</em> 原交易密码</span><input name="myinpPas" type="password" id="myinpPas" maxlength="20" class="inp-phone color22"
+                        style="width:135px;" /><i>若初次设置，请输入登录密码</i>
+                </li>
+                <li><span><em>*</em> 新交易密码</span><input name="myinpPas1" type="password" id="myinpPas1" maxlength="6" class="inp-phone color22"
+                        style="width: 135px;" /><i>密码为6位数字</i></li>
+                <li><span><em>*</em> 确认新密码</span><input name="myinpPas2" type="password" id="myinpPas2" maxlength="6" class="inp-phone color22"
+                        style="width: 135px;" /></li>
+                <li><input type="button" class="inp-button" value="提交" onclick="return chkmyfm(this.form);" /></li>
+            </ol>
+        </form>
+    </div>
+    {%}%}
+    
+    <div class="c-navbar">
+        <div class="c-navbar-inner">
+            <div class="c-navbar-content">
+    
+                <h1>
+                    <a href="{%= path.HOST %}" class="logo">
+                        <div class="bank-time-box" style="display:none">
+                            <p></p>
+                        </div>
+                        <div class="bank-online-box" >
+                            <!-- <img src="./images/bank-online-icon.jpg"> -->
+                            <img src="./new-images/logo.png">
+                        </div>
+    
+                        <!--<span class="logo-text">互联网金融综合交易平台</span>-->
+                    </a>
+                </h1>
+    
+                <div class="nav-menu-container">
+                  {%if(!isMall&&!isDuoBao){%}
+                    <ul class="nav-menu">
+                        {%_.each(menu.topList,function(item){ %} {% if(item&&!item.childList || item.childList.length == 0){ %}
+                        <li class="nav-item">
+                            <a href="{%= item&&item.link %}">{%= item&&item.title %}</a> {% if(item.isHot || item.title === "综合社区"){
+                            %}
+                            <img class="nav-item-hot" src="//static.wsloan.com/images/gb2016/hot.gif"> {% } %}
+                        </li>
+                        {% } else{ %}
+                        <li class="nav-item J_nav_item hasSub">
+                            <a href="{%= item&&item.link %}"><i>{%= item&&item.title %}</i><img
+                                    src="./images/down.png" alt=""></a>
+    
+                            <ul class="nav-sub-menu J_nav_sub_menu">
+                                {%_.each(item.childList,function(it){ %}
+                                <li><a hash href="{%= it.link %}">{%= it.title %}</a></li>
+                                {%})%}
+                                <i></i>
+                            </ul>
+                        </li>
+                        {%}%} {%})%}
+                    </ul>
+                    <ul class="nav-menu">
+                      <li class="nav-item ">
+                        <a target="_blank" href="{%=link.bbs%}">
+                          综合社区
+                        </a>
+                      </li>
+                      <li class="nav-item ">
+                        <a href="{%=link.club%}">
+                          财币俱乐部
+                        </a>
+                      </li>
+    
+                    </ul>
+                    {% } %}
+                    {%if(isMall||isDuoBao){%}
+                    <ul class="nav-menu">
+                      <li class="nav-item ">
+                        <a href="{%=link.club%}">
+                          返回财币俱乐部
+                        </a>
+                      </li>
+                    </ul>
+                    {% } %}
+                    
+                </div>
+    
+    
+            </div>
+        </div>
+    
+    </div>
+    
+    <!--&& (location.pathname == '/' || location.pathname == '/index.html')-->

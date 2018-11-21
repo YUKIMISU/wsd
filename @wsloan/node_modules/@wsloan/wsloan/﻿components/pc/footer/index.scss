@@ -1,0 +1,193 @@
+  /*尾部关于我们*/
+
+  .c-footer {
+    width: 100%;
+    min-width: 1200px;
+    height: auto;
+    overflow: hidden;
+    background: #333;
+    padding: 35px 0;
+    .footer-links {
+      $height: 16px;
+      height: $height;
+      li {
+        $color: #c6c6c6;
+        float: left;
+        height: $height;
+        line-height: $height;
+        font-size: 14px;
+        color: $color;
+        a {
+          color: $color;
+          &:hover {
+            color: #fb6e52;
+          }
+        }
+        &.divider {
+          margin: 0 15px;
+          width: 2px;
+          height: 16px;
+          background: $color;
+        }
+      }
+    }
+    .info {
+      font-size: 12px;
+      overflow: hidden;
+      margin: 25px auto 0 auto;
+      p {
+        height: 21px;
+        line-height: 21px;
+        overflow: hidden;
+        font-size: 12px;
+        color: #c6c6c6;
+        .red {
+          color: #fb6e52;
+        }
+        a {
+          &.friendly-link {
+            margin: 0 5px;
+          }
+          color: #c6c6c6;
+          &:hover {
+            color: #feae00;
+          }
+        }
+      }
+    }
+    /* .home>& {
+      background: #fafafa;
+      .footer-links {
+        li {
+          $color: #a6a6a6;
+          color: $color; // &.divider {
+          //   background: #a6a6a6;
+          // }
+          a {
+            color: $color;
+          }
+        }
+      }
+      .hotline {
+        color: #6f6f6f;
+      }
+    } */
+  }
+
+  .index-friend {
+    height: 83px;
+    overflow: hidden;
+    p {
+      margin: 38px auto 0 auto;
+      text-align: center;
+      a {
+        display: inline-block;
+        margin-right: 26px;
+        // background: url(./images/bottomlink.jpg) no-repeat;
+        height: 35px;
+        // border-radius: 3px;
+        &.a1 {
+          //background-position: -332px top;
+          background-position: -332px -35px;
+          width: 95px;
+        }
+        &.a2 {
+          //background-position: -427px top;
+          background-position: -427px -35px;
+          width: 96px;
+        }
+        &.a3 {
+          //background-position: -619px top;
+          background-position: -619px -35px;
+          width: 96px;
+        }
+        &.a4 {
+          //background-position: -717px top;
+          background-position: -716px -35px;
+          width: 92px;
+        }
+        &.a5 {
+          //background-position: -811px top;
+          background-position: -811px -35px;
+          width: 92px;
+        }
+        &.a6 {
+          //background-position: -903px top;
+          background-position: -903px -35px;
+          width: 92px;
+        }
+        &.a7 {
+          //background-position: -996px top;
+          background-position: -996px -35px;
+          width: 92px;
+        }
+        &.a0 {
+          //background-position: -1184px top;
+          background-position: -1184px -35px;
+          width: 92px;
+        }
+      }
+    }
+  }
+
+  .index-friend p a.a1:hover {
+    background-position: -332px -35px;
+  }
+
+  .index-friend p a.a2:hover {
+    background-position: -427px -35px;
+  }
+
+  .index-friend p a.a3:hover {
+    background-position: -619px -35px;
+  }
+
+  .index-friend p a.a4:hover {
+    background-position: -716px -35px;
+  }
+
+  .index-friend p a.a5:hover {
+    background-position: -811px -35px;
+  }
+
+  .index-friend p a.a6:hover {
+    background-position: -903px -35px;
+  }
+
+  .index-friend p a.a7:hover {
+    background-position: -996px -35px;
+  }
+
+  .index-friend p a.a0:hover {
+    background-position: -1184px -35px;
+  }
+
+  .qrcode-zone {
+    position: absolute;
+    right: 0;
+    top: 0;
+    p {
+      font-size: 12px;
+      color: #b6b6b6;
+      margin-top: 10px;
+    }
+    .hotline {
+      color: #c6c6c6;
+      font-size: 18px;
+    }
+    .textc{
+      font-size: 18px;
+      margin-top: 0;
+    }
+    .tel {
+      font-size: 18px;
+      color: #fb6e52;
+    }
+  }
+
+  .qr-item {
+    float: left;
+    width: 74px;
+    margin-right: 30px;
+    text-align: center;
+  }

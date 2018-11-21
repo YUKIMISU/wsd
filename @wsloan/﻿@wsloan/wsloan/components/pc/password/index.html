@@ -1,0 +1,79 @@
+<div class="password-mask" style="display: none;">
+  <div class="password-wrap">
+    <div class="password-container">
+      <div class="password-close"></div>
+      <input type="password" id="password" placeholder="请输入交易密码"/>
+      <div class="password-btn-wrap">
+        <div class="password-btn password-btn-sure">确定</div>
+        <div class="password-btn password-btn-clear">取消</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .password-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: table;
+  }
+  .password-mask.disabled input {
+    color: #bbb;
+  }
+  .password-wrap {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .password-container {
+    font-size: 24px;
+    padding: 36px 0;
+    text-align: center;
+    margin: auto;
+    background: #fff;
+    border-radius: 16px;
+    width: 480px;
+    position: relative;
+  }
+  .password-container input {
+    text-align: center;
+    border: 0;
+    color: #cfab41;
+    background: #ffe083;
+    outline: 0;
+    height: 64px;
+    line-height: 64px;
+    border-radius: 8px;
+    margin-bottom: 64px;
+    width: 380px;
+  }
+  .password-close {
+    width: 18px;
+    height: 17px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAYAAADQWvz5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjA4QTM5ODY3OUNCNDExRTY4NEQ5OUQyNzA3QUI2NkREIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjA4QTM5ODY4OUNCNDExRTY4NEQ5OUQyNzA3QUI2NkREIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDhBMzk4NjU5Q0I0MTFFNjg0RDk5RDI3MDdBQjY2REQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDhBMzk4NjY5Q0I0MTFFNjg0RDk5RDI3MDdBQjY2REQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5NzMchAAABBklEQVR42pTTgQ1EMBQG4F5jgZuAWIERGIERriMwghuhRmCEMwIriA2scH3J3+Rdr6iXPETr6/PUI47jVAjxMVmbXMS9eJqcTSppDp1JixU3kBQInTuJSnrooRhHlm3bcokBBUwEYBahhSdC6KZkEwh7M6y6QkyWdkA6E1skxWDyxcYyhowcoYg8q9qq6CNoXK+ALVK7D0UHfSBsB6TZ/R4t+At50tSefQCBnqijyWfQy+lR4VQXBDXsIYXG7oB1KNSg0Xx/TQ42XEEdQ2qnR/Qf5sAq7DUvpFGNwOqjp9qVYQXHpGfzlXiVo/jBkiSZLTSg1D0AcTE6Z4RJ/BLrDcSHtV8BBgAhkEtg2yej0wAAAABJRU5ErkJggg==);
+  }
+  .password-btn {
+    width: 174px;
+    height: 48px;
+    line-height: 48px;
+    display: inline-block;
+    background: #ff2a4a;
+    border-bottom: 5px solid #eb2341;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .password-btn-clear {
+    margin-left: 32px;
+    background: #b6b6b5;
+    border-color: #989898;
+  }
+</style>

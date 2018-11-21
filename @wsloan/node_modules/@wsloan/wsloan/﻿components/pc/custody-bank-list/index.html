@@ -1,0 +1,8 @@
+<select class="select J_select" name="cardType" id="J_card_type_select">
+    <option value="0">
+        请选择开户银行
+    </option>
+  {% _.each(bankList, function (item) { %}
+      <option value="{%=item.BankType%}">{%=item.BankName%}</option>
+  {% }) %}
+</select>

@@ -1,0 +1,15 @@
+<div class="layer-rule-container ">
+    {%_.each(ruleList,function(item){ %}
+    <h4 class="main-title">{%= item.mainTitle %}</h4>
+    {%_.each(item.itemList,function(it){ %}
+    <div class="rule-list">
+        <p class="item item-title"><strong>{%= it.itemTitle %}</strong></p>
+        {%_.each(it.subList,function(sub,index){ %}
+        <p class="item item-before">{%= sub.before %}</p>
+        <p class="item item-content"><i class="num">{%= index + 1 %}</i>{%= sub.content %}</p>
+        <p class="item item-pc">{%= sub.ps %}</p>
+        {% }) %}
+    </div>
+    {%});%}
+    {%}) %}
+</div>

@@ -1,0 +1,210 @@
+/*分页*/
+
+.ws-pagination {
+    overflow: hidden;
+    padding: 15px 0 25px 0;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 32px;
+    height: 32px;
+    clear: both;
+    .ws-pagination-page,
+    .ws-pagination-prev,
+    .ws-pagination-next,
+    .ws-pagination-go {
+        background: #fff;
+        margin: 0 3px;
+        color: #888;
+        height: 14px;
+        line-height: 14px;
+        text-align: center;
+        padding: 2px 5px;
+        border: 1px solid #ababab;
+        border-radius: 3px;
+        vertical-align: middle;
+        &:hover {
+            background: #ff6461;
+            color: #fff;
+            border: 1px solid #ff6461;
+        }
+        &.current {
+            background: #f14c2b;
+            color: #fff;
+            border: 1px solid #f14c2b;
+        }
+    }
+    .ws-pagination-prev,
+    .ws-pagination-next {
+        float: none;
+        vertical-align: middle;
+        background: #fff;
+        color: #c0c0c0;
+        margin-top: 0px;
+        border: 1px solid #ababab;
+        cursor: pointer;
+        &.disabled {
+            background: #f9f9f9;
+            color: #999;
+            border: 1px solid #ababab;
+        }
+    }
+    .ws-pagination-num {
+        width: 30px;
+        background: #fff;
+        margin: 0 3px;
+        color: #222;
+        height: 14px;
+        line-height: 14px;
+        text-align: center;
+        overflow: hidden;
+        padding: 4px 4px;
+        border: 1px solid #ababab
+    }
+    .ws-pagination-go {
+        height: 24px;
+        cursor: pointer;
+    }
+}
+
+//分页
+.pagination-invest {
+    $mainColor: #ffc201;
+    .ws-pagination {
+        font-size: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 25px auto 130px;
+        text-align: center;
+        line-height: 40px;
+        height: 42px; // float: left;
+        clear: both; // border-left: 1px solid #e1e1e1;
+        .ws-pagination-page,
+        .ws-pagination-prev,
+        .ws-pagination-next,
+        .ws-pagination-go,
+        .pn-break {
+            // float: left;
+            // width: 40px;
+            // height: 40px;
+            font-size: 14px;
+            background: #fff;
+            margin: 0;
+            border: 1px solid #e1e1e1;
+            border-left: none;
+            color: #999999; // height: 14px;
+            line-height: 40px;
+            text-align: center; // padding: 0; 
+            padding: 8px 15px; // border: none;
+            border-radius: 0;
+            vertical-align: middle;
+            &:hover {
+                background: $mainColor;
+                color: #fff; // border: none;
+                border: 1px solid #e1e1e1;
+                border-left: none;
+            }
+            &.current {
+                background: $mainColor;
+                color: #fff; // border: none;
+                border: 1px solid #e1e1e1;
+                border-left: none;
+            }
+        }
+        .ws-pagination-amount {
+            display: none;
+            font-size: 14px;
+            background: #fff;
+            margin: 0 4px;
+            color: #888;
+            height: 14px;
+            line-height: 14px;
+            text-align: center;
+            padding: 8px 11px;
+            border: none;
+            border-radius: 0;
+            vertical-align: middle;
+        }
+        .ws-pagination-prev,
+        .ws-pagination-next {
+            float: none;
+            width: 90px;
+            vertical-align: middle;
+            background: #fff;
+            color: #999999;
+            margin-top: 0px; // border: none;
+            cursor: pointer;
+            &.disabled {
+                background: #ccc;
+                color: #999; // border: none;
+                border: 1px solid #e1e1e1;
+                border-left: none;
+            }
+        }
+        .ws-pagination-prev {
+            border-left: 1px solid #e1e1e1;
+        }
+        .ws-pagination-num {
+            width: 30px;
+            background: #fff;
+            margin: 0 3px;
+            color: #999999;
+            height: 14px;
+            line-height: 14px;
+            text-align: center;
+            overflow: hidden;
+            padding: 4px 4px;
+            border: none
+        }
+        .ws-pagination-go {
+            height: 24px;
+            cursor: pointer;
+        }
+    }
+}
+
+.ws-pagination-memb {
+    margin: 25px auto;
+    line-height: 20px;
+    text-align: center;
+    font-size: 0;
+    .ws-pagination-cell {
+        font-size: 14px;
+        line-height: 20px;
+        vertical-align: middle;
+        color: #999999;
+        margin: 0 3px;
+    }
+    .ws-pagination-prev,
+    .ws-pagination-next,
+    .ws-pagination-num,
+    .ws-pagination-go {
+        border: 1px solid #d1d1d1;
+        border-radius: 2px;
+        float: none;
+        padding: 0 6px;
+        vertical-align: middle;
+        background: #fff;
+        cursor: pointer;
+        &.disabled {
+            color: #d1d1d1;
+        }
+    }
+    .ws-pagination-num,
+    .ws-pagination-go {
+        line-height: 18px;
+    }
+    .ws-pagination-num {
+        width: 30px;
+        padding: 0;
+        text-align: center;
+    }
+    .ws-pagination-prev,
+    .ws-pagination-next,
+    .ws-pagination-pagesize {
+        color: #444;
+    }
+    .ws-pagination-num,
+    .ws-pagination-amount em {
+        color: #fc8672;
+    }
+}

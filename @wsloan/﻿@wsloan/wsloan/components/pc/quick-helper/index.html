@@ -1,0 +1,110 @@
+<!-- 浮动层 -->
+<script>
+    var online = [];
+</script>
+{% if(isShow){ %}
+<ul class="float-rig" id="floatrig">
+    <li class="f7" id="J_top_img">
+        <i class="float-rigman"></i>
+    </li>
+    <li class="f1 amn2">
+        <a href="{%= path.HOST %}/xszy/index.aspx" target="_blank">新手指引</a>
+    </li>
+    <li class="f2 amn2">
+        <a href="{%=path.HTML %}guide/index.html#help" target="_blank">帮助中心</a>
+    </li>
+    <li class="f5 amn2">
+        <a href="{%= path.HTML %}suggest/index.html" target="_blank">意见反馈</a>
+    </li>
+    <li class="f6 amn2">
+        <a href="javascript:">收益计算</a>
+        <div id="float_jsj">
+            <div class="float-jsj amn3">
+                <div class="float-jsj-fl">
+                    <h3>收益计算器</h3>
+                    <form>
+                        <table>
+                            <tr>
+                                <td height="36px" width="30%">投资金额：</td>
+                                <td>
+                                    <input type="text" class="inp-jsj fl_inc_cal" id="fl_tzje" />
+                                    <i>元</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="36px">投资期限：</td>
+                                <td>
+                                    <input type="text" class="inp-jsj" id="fl_tzqx" />
+                                    <i>月</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="36px">年化利率：</td>
+                                <td>
+                                    <input type="text" class="inp-jsj fl_inc_cal" id="fl_nhl" />
+                                    <i>%</i>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>
+                            <input type="button" class="btn72" value="计算" id="fl_cal" /> &nbsp; &nbsp; &nbsp;
+                            <input type="reset" class="btn72h" value="重置" />
+                        </p>
+                    </form>
+                </div>
+                <div class="float-jsj-fr">
+                    <h3>计算结果</h3>
+                    <p>
+                        总收益：
+                        <span style="color: #f31437">￥</span>
+                        <span style="color: #f31437" id="val_zsy">0</span>
+                    </p>
+                    <p style="margin-bottom: 25px;">
+                        每月收款：
+                        <span style="color: #ff9900">￥</span>
+                        <span style="color: #ff9900" id="val_my">0</span>
+                    </p>
+                    <p>
+                        本息合计：
+                        <span style="color: #272727">￥</span>
+                        <span style="color: #272727" id="val_hj">0</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="f3 amn2">
+        <b class="b1 J_openQQ">
+            <a href="javascript:" target="_blank" style="display: block; width: 56px; height: 56px"></a>
+        </b>
+        <a href="javascript:" target="_blank" class="J_openQQ">在线客服</a>
+        <div class="kefu-num" id="kefu">
+            <h4>QQ在线客服</h4>
+
+            {%_.each(qqList,function(item,i){%} {% if(qqList.length - 2 == i){ %}
+            <h4>值班客服</h4>
+            {% }; %}
+            <a href="javascript:;" data-qq="{%=item.qq%}">
+                {% if (online && online[i] == 1) { %}
+                <img src="./images/qq_1.jpg">{% } else { %}
+                <img src="./images/qq_2.jpg">{% } %}{%=item.name%}</a>
+            {%})%}
+
+        </div>
+    </li>
+    <li class="f0 amn2">
+        <!-- <b class="b1">
+            <a href="javascript:" target="_blank" style="display: block; width: 56px; height: 56px"></a>
+        </b>
+        <a href="javascript:" target="_blank" class="J_openWX">微信咨询</a> -->
+        <div class="f-wx"></div>
+        <div id="f_wx1">
+            <img src="//static.wsloan.com/images/float_wx3.jpg" />
+        </div>
+    </li>
+    <li class="f4 amn2 rad5" id="scrolltop">
+        <b></b>
+    </li>
+</ul>
+
+{%}%}

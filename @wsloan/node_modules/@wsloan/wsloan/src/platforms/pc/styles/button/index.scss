@@ -1,0 +1,28 @@
+@import "./mixin";
+.btn-recharge{
+  @include ws-btn($height:42px);
+  &:hover{
+    opacity: .85;
+    filter: alpha(opacity=85);
+  }
+}
+.btn-invest{
+  @include ws-btn(150px,38px,3px);
+  &.yellow{
+    background: #FFCF54;
+    border: 1px solid #FFCF54;
+    color: #fff;
+  }
+}
+.btn {
+  &-sure {
+    @extend .btn-recharge;
+  }
+  &-cancel {
+    @include ws-btn($height: 42px, $background: #eee);
+    color: #888;
+    &:hover {
+      color: #fb6e52;
+    }
+  }
+}

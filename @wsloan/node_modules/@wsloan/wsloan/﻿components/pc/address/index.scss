@@ -1,0 +1,18 @@
+@import "~WS_DIR/style/variable/color.scss";
+@import "~WS_DIR/style/variable/placeholder.scss";
+
+.select {
+            @extend %input;
+        }
+        .address-province {
+            @extend %input;
+            float: left;
+        }
+        .address-city {
+            @extend %input;
+            float: left;
+            margin-left: 32px;
+        }
+        .address-county {
+            display: none;
+        }

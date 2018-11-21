@@ -1,0 +1,42 @@
+  // 选项卡
+  @mixin tab($height){
+    height: $height;
+    line-height:$height;
+    li{
+      color: #4d4d4d;
+      text-align: center;
+      cursor: pointer;
+      border-bottom:1px solid #eee;
+      padding-bottom: 4px;
+      font-size: 21px;
+      float: left;
+      //margin-bottom: -1px;
+      &.current{
+        color:$main-color;
+        border-bottom:1px solid $main-color;
+      }
+    }
+  }
+
+  .ws-tab{
+    @include tab(38px);
+    &.ws-tab-solid{
+      background: #f1f2f8;
+      li{
+        color: #727272;
+        width: 190px;
+        font-size: 16px;
+        border-bottom: 0;
+        &.current{
+          background: #fff;
+          line-height: 36px;
+          border-top: 2px solid $main-color;
+
+        }
+      }
+
+    }
+
+
+  }
+

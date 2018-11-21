@@ -1,0 +1,61 @@
+
+@import "./button/mixin";
+@mixin ws-container {
+  width: 1002px;
+  margin: auto;
+}
+
+
+@mixin ws-fl {
+  float: left;
+}
+
+@mixin  ws-fr {
+  float: right;
+
+}
+
+@mixin ov-hidden {
+  overflow: hidden;
+  height: auto;
+}
+
+@mixin border($direct,$color){
+  @if length($direct) >= 1 {
+    border-#{$direct}: 1px solid #f6f7fb;
+
+  } @else {
+    border: 1px solid #f6f7fb;
+  }
+}
+
+@mixin border-f6($direct,$color...) {
+  @include border($direct,#f6f7fb);
+}
+
+@mixin height-l($height){
+  height:$height;
+  line-height:$height;
+}
+
+@mixin a-color($name,$color){
+  &-#{$name},&-#{$name}:visited,&-#{$name}:hover,&-#{$name}:active{
+    color: $color;
+  }
+}
+
+@mixin a-font($size){
+  &-#{$size}{
+    font-size: #{$size}px;
+  }
+}
+
+@mixin radius($size){
+  border-radius: #{$size}px;
+}
+
+@mixin background($name,$color){
+  &-#{$name}{
+    background: $color;
+  }
+}

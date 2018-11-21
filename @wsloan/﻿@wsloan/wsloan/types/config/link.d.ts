@@ -1,0 +1,30 @@
+export default interface link {
+  home: string[];
+  invest: string[];
+  login: string[];
+  recharge: string[];
+  addbankcard: string[];
+  safe: string[];
+  bbshome: string[];
+  sendbbs: string[];
+  bbsdetail: string[];
+  memb: string[];
+  my: string[];
+  exp: string[];
+  setJymm: string[];
+  setJymmByJymm: string[];
+  changetradepasswordByID: string[];
+  propertyrecord: string[];
+  investrecord: string[];
+  investrtransecord: string[];
+  investExchangeRecord: string[];
+  investBenefitRecord: string[];
+  investCaizhiRecord: string[];
+  redpackets: string[];
+  autoInvest: string[];
+  drawCash: string[];
+  accountSet: string[];
+  addfriend: string[];
+  redpacketrain: string[];
+  showFeedBackAlert: string[];
+}

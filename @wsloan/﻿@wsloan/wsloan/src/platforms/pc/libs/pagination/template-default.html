@@ -1,0 +1,37 @@
+<div class="{%=options.paginationCls%}">
+  {%if(amount===0){%}
+  <span class="ws-pagination-amount">
+    {%=options.amountLayout==='string'?'第0/0页':options.amountLayout==='number'?'0/0':'第0/0页'%}
+  </span>
+  {%}else{%}
+  <span class="ws-pagination-amount">
+    {%=options.amountLayout==='string'?'第'+current+'/'+amount+'页':options.amountLayout==='number'?current+'/'+amount:'第'+current+'/'+amount+'页'%}
+  </span>
+  {%}%}
+
+  <span class="ws-pagination-prev J_PagePrev">{%=options.shiftText[0]%}</span>
+
+  {%if(options.isNumShow){%} {%if(start>1){%}
+
+  <a class="J_PerPage ws-pagination-page " href="javascript:void(0);" data-page-index="1">1</a>
+  {%if(start>2){%}
+  <b class="pn-break J_PageBreakPrev">...</b>
+  {%}}} %} {%_.each(_.range(start,end+1),function(i){ %}
+
+  <a class="J_PerPage ws-pagination-page" href="javascript:void(0);" data-page-index="{%=i%}">{%=i%}</a>
+
+  {%})%} {%if(amount > end ){if(amount-1>end ){%}
+  <b class="pn-break J_PageBreakNext">...</b>
+  {%}%}
+  <a class="J_PerPage ws-pagination-page" href="javascript:void(0);" data-page-index="{%=amount%}">{%=amount%}</a>
+  {%}%}
+
+
+  <span class="ws-pagination-next J_PageNext">{%=options.shiftText[1]%}</span>
+
+  {%if(options.isSkipShow&&amount>1){%} 到第&nbsp;
+
+  <input name="page" type="text" class="ws-pagination-num J_page_num_input" value="1" onkeyup="value=value.replace(/[^0123456789]/g,'')">&nbsp;页&nbsp;
+
+  <input class="J_PageSkip ws-pagination-go" type="button" name="Submit" value="GO"> {%}%}
+</div>

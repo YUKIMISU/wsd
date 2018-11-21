@@ -1,0 +1,60 @@
+@import './variable/index.scss';
+@import './mixins.scss';
+//@import './base.scss';
+//@import './grid.scss';
+//@import './tab.scss';
+
+
+.ws-fl {
+  float: left;
+}
+
+.ws-fr {
+  float: right;
+
+}
+
+.ws-clearfix {
+  clear: both;
+  &::before, &::after {
+    display: table;
+    content: '';
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.ws-mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  z-index: 99998;
+}
+
+.ws-a{
+  @include a-color("red",$main-color);
+  @include a-color("yellow",#ffae00);
+  @include a-color("orange",#ffaf00);
+  @include a-color("green",#6ac053);
+  @include a-color("white",#fff);
+  @include a-color("blue",#7590FC);
+
+  @include a-font(12);
+  @include a-font(14);
+  @include a-font(16);
+  @include a-font(18);
+}
+.ws-bg{
+  @include background("gray",#F6F7FB);
+  @include background("white",#fff);
+}

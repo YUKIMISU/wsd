@@ -1,0 +1,13 @@
+@mixin ws-btn($width:116px,$height:38px,$radius:5px,$borderColor:#fff,$background:#fb6e52,$fontSize:14px) {
+  background: $background;
+  color: $borderColor;
+  border: 1px solid $borderColor;
+  width: $width;
+  height: $height;
+  line-height: $height;
+  text-align: center;
+  border-radius: $radius;
+  display: inline-block;
+  cursor: pointer;
+  font-size: $fontSize;
+}

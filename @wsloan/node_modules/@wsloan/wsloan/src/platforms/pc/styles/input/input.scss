@@ -1,0 +1,26 @@
+.input {
+    &-jine {
+        background: #f6f7fb;
+        height: 24px;
+        // border: 1px solid #d3d3d3;
+        padding: 8px 6px;
+        font-size: 24px;
+        width: 254px;
+        color: #a5a5a6;
+        *font-size: 20px
+    }
+}
+
+.input-rltv {
+    position: relative;
+    width: 254px;
+    display: inline-block;
+    margin-right: 10px;
+    .unit {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        line-height: 14px;
+        margin-top: -7px;
+    }
+}

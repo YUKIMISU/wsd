@@ -1,0 +1,24 @@
+%left {
+  float: left;
+}
+
+@mixin grid ($i) {
+  .ws-col-#{$i} {
+    width: 100 / 12 * $i * 1%;
+    min-height: 1px;
+    @extend %left;
+  }
+}
+
+.ws-row {
+  width: 100%;
+  // @include ov-hidden;
+  @for $i from 1 through 12 {
+    @include grid($i);
+  }
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}

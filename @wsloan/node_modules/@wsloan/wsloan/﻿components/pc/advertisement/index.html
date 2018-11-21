@@ -1,0 +1,11 @@
+{%if (adConfig.show && imgReady ){ %}
+<div id="J_ad_alert" class="ws-mask-gray">
+    <div class="c-ad-alert animated bounceInDown" style="background-image:url({%= adConfig.img_src %});background-position:left center;width:{%= adConfig.width %}px;height:{%= adConfig.height %}px;margin-top:{%= -adConfig.height/2 %}px;margin-left:{%= -adConfig.width/2 %}px;">
+
+        <a href="{%= adConfig.href %}" target="_blank" class="ad-link-content" style="height:{%= adConfig.btnHeight %}px;bottom:{%= adConfig.btnBottom %}px;">
+
+        </a>
+        <span class="ad-close J_close" style="right:{%= adConfig.closeRight %}px;top:{%= adConfig.closeTop %}px;"></span>
+    </div>
+</div>
+{%} %} 

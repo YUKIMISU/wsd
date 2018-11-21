@@ -1,0 +1,8 @@
+<select class="{%=className%}">
+  {% _.forEach(items, function (item, index) { %}
+    <option value="{%=item.value%}"
+      {%if (selected === '' && index === 0) { %} selected="selected" {% }%}
+      {%if (Number(item.value) === Number(selected)) { %} selected="selected" {% }%}
+    >{%=item.name%}</option>
+  {% }) %}
+</select>

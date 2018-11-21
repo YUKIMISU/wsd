@@ -1,0 +1,28 @@
+<div class="filter-data">
+    {% if(showType){ %}
+    <span class="name">
+        查询类型：
+    </span>
+
+    <span class="type-box">
+        <select name="" id="" class="select-type J_type">
+            {%_.each(selectData,function(item){ %}
+            <option value="{%= item.value %}">{%= item.name %}</option>
+            {%}); %}
+        </select>
+        <i class="select-icon"></i>
+    </span>
+
+    {%} %}
+
+  <span class="name">
+        起始时间：
+    </span>
+  <input type="text" maxlength="10" autocomplete="off" class="inp-time J_start_time J_calendar">
+  <span class="name">
+        截止时间：
+    </span>
+  <input type="text" maxlength="10" autocomplete="off" class="inp-time J_end_time J_calendar">
+  <input type="button" value="查询" class="submit J_search">
+
+</div>

@@ -1,0 +1,27 @@
+<div class="ws-pagination-memb">
+
+
+  <span class="ws-pagination-amount ws-pagination-cell">
+    当前<em>{%=current==amount?options.count-options.pageSize*(current-1):options.pageSize%}</em>条，共<em>{%=options.count%}</em>条记录
+  </span>
+
+
+  <span class="ws-pagination-prev ws-pagination-cell J_PagePrev">
+    {%=options.shiftText[0]%}
+  </span>
+
+
+
+  <input name="page" type="text" class="ws-pagination-num ws-pagination-cell J_page_num_input" value="{%=current%}" onkeyup="value=value.replace(/[^0123456789]/g,'')">
+
+
+  <span class="ws-pagination-pagesize ws-pagination-cell">/{%=amount%}</span>
+
+
+
+  <span class="ws-pagination-next ws-pagination-cell J_PageNext">{%=options.shiftText[1]%}</span>
+
+
+
+  <input class="J_PageSkip ws-pagination-go ws-pagination-cell" type="button" name="Submit" value="跳转">
+</div>

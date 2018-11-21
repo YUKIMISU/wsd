@@ -1,0 +1,45 @@
+/*
+Error: Invalid US-ASCII character "\xE9"
+        on line 330 of index.scss
+
+325:   .c-navbar-inner {
+326:     width: 1200px;
+327:     padding: 18px 0 0 0;
+328:     margin: 0 auto;
+329:     height: 60px;
+330:     // menu里 弹窗遮罩z-index比这个低, 设置到10就可以了
+331:     z-index: 10;
+332:     position: relative;
+333: 
+334:     h1 {
+335:       a {
+
+Backtrace:
+index.scss:330
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/util.rb:1300:in `rescue in block in find_encoding_error'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/util.rb:1297:in `block in find_encoding_error'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `each_with_index'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/util.rb:1296:in `find_encoding_error'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/util.rb:905:in `check_sass_encoding'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:436:in `check_encoding!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:392:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/scss:13:in `<top (required)>'
+/usr/local/bin/scss:23:in `load'
+/usr/local/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE9\"\A         on line 330 of index.scss\A \A 325:   .c-navbar-inner {\A 326:     width: 1200px;\A 327:     padding: 18px 0 0 0;\A 328:     margin: 0 auto;\A 329:     height: 60px;\A 330:     // menu里 弹窗遮罩z-index比这个低, 设置到10就可以了\A 331:     z-index: 10;\A 332:     position: relative;\A 333: \A 334:     h1 {\A 335:       a {"; }

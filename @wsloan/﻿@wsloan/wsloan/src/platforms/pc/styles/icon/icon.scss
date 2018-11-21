@@ -1,0 +1,10 @@
+@import "../mixins";
+.icon{
+  display: inline-block;
+  vertical-align:middle;
+  &-notice{
+    background: url(~WS_DIR/images/icons/note.jpg);
+    @include height-l(14px);
+    width: 14px;
+  }
+}

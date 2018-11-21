@@ -1,0 +1,5 @@
+<ul>
+{% _.each(items, function (item, index) { %}
+  <li>{%=index%}: {%=item.name%}</li>
+{% }) %}
+</ul>

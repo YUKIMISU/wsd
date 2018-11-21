@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "update:wsloan": "npm i --save-dev @wsloan/wsloan --registry http://36.7.138.114:4873"
+  },
+  "devDependencies": {
+    "@wsloan/wsloan": "^1.2.169"
+  }
+}

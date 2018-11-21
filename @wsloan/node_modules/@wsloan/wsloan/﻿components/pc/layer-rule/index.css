@@ -1,0 +1,40 @@
+.layer-rule-container {
+  padding: 50px 30px;
+  height: auto;
+  overflow: hidden; }
+  .layer-rule-container .main-title {
+    color: #4d4d4d;
+    font-size: 16px;
+    border-left: 3px solid #fb6e52;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 0 0 10px;
+    margin-bottom: 15px; }
+  .layer-rule-container .rule-list .item {
+    color: #a3a3a3;
+    line-height: 24px;
+    padding-left: 10px; }
+    .layer-rule-container .rule-list .item-content {
+      padding-left: 20px;
+      position: relative; }
+      .layer-rule-container .rule-list .item-content .num {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        background: #eee;
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        display: inline-block;
+        border-radius: 100%; }
+  .layer-rule-container .rule-list i {
+    background: url(//static.wsloan.com/images/user/coin_yj.jpg) no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    margin-right: 5px; }
+
+/*# sourceMappingURL=index.css.map */

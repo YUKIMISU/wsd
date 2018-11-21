@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "importHelpers": true,
+    "target": "es2015",
+    "jsx": "preserve",
+    "noEmit": true,
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules"]
+}

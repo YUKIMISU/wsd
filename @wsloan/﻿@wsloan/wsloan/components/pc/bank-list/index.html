@@ -1,0 +1,5 @@
+<select class="select">
+  {% _.each(items, function (item) { %}
+      <option value="{%=item%}">{%=item%}</option>
+  {% }) %}
+</select>

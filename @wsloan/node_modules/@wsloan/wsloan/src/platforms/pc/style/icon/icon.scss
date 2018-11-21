@@ -1,0 +1,15 @@
+@import "../mixins";
+.icon{
+  display: inline-block;
+  vertical-align:middle;
+  &-notice{
+    background: url(~WS_DIR/images/icons/note.jpg) no-repeat;
+    @include height-l(14px);
+    width: 14px;
+  }
+  &-question{
+    background: url(~WS_DIR/images/icons/question.jpg) no-repeat;
+    @include height-l(14px);
+    width: 14px;
+  }
+}

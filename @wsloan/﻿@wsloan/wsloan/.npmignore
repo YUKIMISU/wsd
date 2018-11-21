@@ -1,0 +1,16 @@
+/接口设计.md
+/.idea
+/node_modules
+/src/.idea
+/src/service/ignore
+/src/business.ignore
+/_pc.ignore
+/business.ignore
+/system.ignore
+/view.ignore
+/utils.ignore
+/src/platforms/pc/components
+.DS_Store
+/src/translator/r.md
+/.history
+vue-build-config

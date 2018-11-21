@@ -1,0 +1,40 @@
+.ws-fl {
+  float: left; }
+
+.ws-fr {
+  float: right; }
+
+.ws-clearfix {
+  clear: both; }
+  .ws-clearfix::before, .ws-clearfix::after {
+    display: table;
+    content: '';
+    height: 0;
+    visibility: hidden;
+    overflow: hidden; }
+  .ws-clearfix::after {
+    clear: both; }
+
+.ws-a-red, .ws-a-red:visited, .ws-a-red:hover, .ws-a-red:active {
+  color: #fb6e52; }
+.ws-a-yellow, .ws-a-yellow:visited, .ws-a-yellow:hover, .ws-a-yellow:active {
+  color: #ffae00; }
+.ws-a-orange, .ws-a-orange:visited, .ws-a-orange:hover, .ws-a-orange:active {
+  color: #ffaf00; }
+.ws-a-green, .ws-a-green:visited, .ws-a-green:hover, .ws-a-green:active {
+  color: #6ac053; }
+.ws-a-12 {
+  font-size: 12px; }
+.ws-a-14 {
+  font-size: 14px; }
+.ws-a-16 {
+  font-size: 16px; }
+.ws-a-18 {
+  font-size: 18px; }
+
+.ws-bg-gray {
+  background: #F6F7FB; }
+.ws-bg-white {
+  background: #fff; }
+
+/*# sourceMappingURL=common.css.map */

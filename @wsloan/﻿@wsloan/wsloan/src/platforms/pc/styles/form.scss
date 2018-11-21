@@ -1,0 +1,14 @@
+@import './variable/color.scss';
+@import './variable/placeholder.scss';
+
+.ws {
+  &-form {
+    
+  }
+  &-input {
+    @extend %input;
+  }
+  &-select {
+    @extend %input;
+  }
+}
